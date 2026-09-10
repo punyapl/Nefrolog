@@ -1,0 +1,137 @@
+/* stylelint-disable color-hex-length */
+/* stylelint-disable scss/at-rule-no-unknown */
+/* stylelint-disable media-feature-range-notation */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable at-rule-empty-line-before */
+@import "tailwindcss";
+
+@custom-variant hover (&:hover);
+
+@theme {
+    --color-primary: #4A4390;
+    --color-primary-light: #E8E8FF;
+    --color-background: #ffffff;
+    --color-grad-start: #8989DB;
+    --color-border: #E5E5E5;
+    --color-text-primary: #4A4390;
+    --color-text-main: #1F2937;
+    --color-text-secondary: #6B7280;
+    --color-text-white: #FFFFFF;
+    --color-button-hvr: #845CC7;
+}
+
+@layer components {
+    .font-h1 {
+        @apply font-medium text-[64px] leading-none;
+    }
+    @media (max-width: 768px) {
+        .font-h1 { @apply text-[32px]; }
+    }
+
+    .font-h2 {
+        @apply font-bold text-[46px] leading-none;
+    }
+    @media (max-width: 768px) {
+        .font-h2 { @apply text-[28px]; }
+    }
+
+    .font-h3 {
+        @apply font-bold text-[40px] leading-none;
+    }
+    @media (max-width: 768px) {
+        .font-h3 { @apply text-[24px]; }
+    }
+
+    .font-h4 {
+        @apply font-bold text-[32px] leading-none;
+    }
+    @media (max-width: 768px) {
+        .font-h4 { @apply text-xl; }
+    }
+
+    .font-h5 {
+        @apply font-bold text-[28px] leading-none;
+    }
+    @media (max-width: 768px) {
+        .font-h5 { @apply text-lg; }
+    }
+
+    .font-h6 {
+        @apply font-bold text-[22px] leading-none;
+    }
+    @media (max-width: 768px) {
+        .font-h6 { @apply text-base; }
+    }
+
+    .font-sub {
+        @apply font-normal text-2xl leading-tight;
+    }
+    @media (max-width: 768px) {
+        .font-sub { @apply text-sm; }
+    }
+
+    .font-p-xl {
+        @apply font-normal text-xl leading-tight;
+    }
+    @media (max-width: 768px) {
+        .font-p-xl { @apply text-lg; }
+    }
+
+    .font-p-lg {
+        @apply font-normal text-lg leading-tight;
+    }
+    @media (max-width: 768px) {
+        .font-p-lg { @apply text-base; }
+    }
+
+    .font-p-md {
+        @apply font-normal text-base leading-tight;
+    }
+    @media (max-width: 768px) {
+        .font-p-md { @apply text-sm; }
+    }
+
+    .font-p-sm {
+        @apply font-normal text-sm leading-tight;
+    }
+    @media (max-width: 768px) {
+        .font-p-sm { @apply text-[13px]; }
+    }
+
+    .font-p-xs {
+        @apply font-normal text-xs leading-tight;
+    }
+
+    .font-btn-lg {
+        @apply font-medium text-[24px] leading-none;
+    }
+
+    .font-btn-md {
+        @apply font-medium text-xl leading-none;
+    }
+
+    .font-btn-sm {
+        @apply font-medium text-lg leading-none;
+    }
+}
+
+@layer utilities {
+    .scrollbar-primary::-webkit-scrollbar {
+    height: 8px;
+    width: 8px;
+    }
+    .scrollbar-primary::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: var(--color-background);
+    }
+    .scrollbar-primary::-webkit-scrollbar-track:active {
+        background-color: var(--color-background);
+    }
+    .scrollbar-primary::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        background-color: var(--color-primary);
+    }
+    .scrollbar-primary::-webkit-scrollbar-thumb:active {
+        background-color: var(--color-primary);
+    }
+}
